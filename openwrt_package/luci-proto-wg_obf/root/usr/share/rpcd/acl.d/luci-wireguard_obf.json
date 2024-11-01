@@ -1,0 +1,22 @@
+{
+	"luci-proto-wireguard_obf": {
+		"description": "Grant access to LuCI Wireguard Obfuscated procedures",
+		"read": {
+			"ubus": {
+				"luci.wireguard_obf": [
+					"getWgInstances"
+				]
+			},
+			"uci": [ "ddns", "system" ]
+		},
+		"write": {
+			"ubus": {
+				"luci.wireguard_obf": [
+					"generateKeyPair",
+					"getPublicAndPrivateKeyFromPrivate",
+					"generatePsk"
+				]
+			}
+		}
+	}
+}

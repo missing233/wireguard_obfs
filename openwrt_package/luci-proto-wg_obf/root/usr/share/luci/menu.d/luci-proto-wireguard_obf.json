@@ -1,0 +1,14 @@
+{
+	"admin/status/wireguard_obf": {
+		"title": "WireGuard Obfuscated",
+		"order": 92,
+		"action": {
+			"type": "view",
+			"path": "wireguard_obf/status"
+		},
+		"depends": {
+			"acl": [ "luci-proto-wireguard_obf" ],
+			"uci": { "network": true }
+		}
+	}
+}
